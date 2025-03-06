@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*declaracion de variables*/
+:root{
+  --color-primario: #0F2A3F;
+  --color-secundario: #17BEBB;
+  --color-terciario: #EAEAEA;
+  --color-hover: #272727;
+
+  --fuente-montserrat: "Montserrat", sans serif;
+  --fuente-krona: "Krona One", sans serif
+}
+/*cambio de margenes predefinidos*/
+*{ 
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/*muestra imagen de fondo header*/
+.header{
+  background-image: url('https://conecta.tec.mx/sites/default/files/styles/header_full/public/2021-08/ciberseguridad-tec-de-monterrey.jpg.webp?itok=W-r5RhYK');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: auto;
+}
+/*acomodo de los elementos del NAV*/
+.header_menu{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 18.75rem;
+  gap: 5rem;
+  
+}
+
+/*diseño primer elemento link del nav*/
+.header_menu_boton{
+  display: flex;
+  justify-content: center;
+  font-family: var(--fuente-montserrat); 
+  border: 0.125rem solid var(--color-primario);
+  width: 11.25rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: var(--color-primario);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: var(--color-terciario);
+}
+
+
+.header_menu_boton:hover{
+  background-color: var(--color-hover);
+  transform: scale(1.1);
+}
+
+/* class del main*/
+.presentacion{
+  display: flex;
+  align-items: center;
+  padding: 5% 5%;
+  justify-content: space-between;
+  gap: 82px;
+}
+
+/*es el selector para definir sección */
+.presentacion_contenido{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.presentacion_contenido_titulo{
+  font-family: var(--fuente-krona);
+  font-size: 2.25rem;
+  line-height: 3.5rem;
+}
+
+.titulo-destacado{
+  color: var(--color-terciario);
+}
+
+.presentacion_contenido_texto{
+  font-family: var(--fuente-montserrat);
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  
+}
+
+/* vizualización del acomodo de los elementos que forman precentacion_enlaces*/
+.presentacion_enlaces{
+  display: flex;
+  justify-content: space-between;
+  flex-direction:column;
+  align-items: center;
+  top: 26.8rem;
+  left: 0.3125rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* vizualización de la letra del h2 enlace*/
+.presentacion__enlaces_subtitulo{
+  font-family: var(--fuente-krona);
+  font-size: 1.5rem;
+}
+
+/* vizualización del diseño del botón del enlace*/
+.presentacion__enlaces_link{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--fuente-montserrat);
+  width: 50%;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.34rem 0;
+  text-decoration: none;
+  color: var(--color-secundario);
+  border: 0.125rem solid var(--color-terciario);
+  gap: 0.625rem;
+
+}
+
+.presentacion__enlaces_link:hover{
+  background-color: var(--color-hover);
+  transform: scale(1.1);
+}
+
+.imagen{
+  width: 40%;
+  border-radius: 1rem;  
+  margin: 5%;
+  border: 0.31rem solid var(--color-terciario);
+}
+
+.footer{
+  background-color:var(--color-secundario);
+  padding: 1.5rem;
+  text-align: center;
+  font-family: var(--fuente-montserrat);
+  color: var(--color-terciario);
+  font-size: 1.125rem;
+  
+}
+
+@media (max-width: 1200px) {
+
+  .presentacion{
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+
+  .presentacion_contenido{
+    width: auto;
+  }
+
+  .header_menu_boton{
+    width: auto;
+  }
+}
